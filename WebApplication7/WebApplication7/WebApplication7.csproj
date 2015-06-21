@@ -148,6 +148,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\arrow.jpg" />
+    <Content Include="Content\arrow.png" />
     <Content Include="Content\header.jpg" />
     <Content Include="Content\header2.jpg" />
     <None Include="Service References\ServiceReference\UserReviewSaveService.disco" />

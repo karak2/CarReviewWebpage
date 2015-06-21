@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication7.Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
+    <h1>Rate your current or a former car of yours</h1>
     <table style="width: 100%; height: 282px;">
         <tr>
             <td>Brand</td>
@@ -100,10 +100,10 @@
     </asp:DropDownList>
             </td>
         </tr>
-        <tr>
-            <td>
-    <asp:Button ID="Button1" runat="server" Text="Submit review" OnClick="Button1_Click" />
-            </td>
-        </tr>
     </table>
+    <div align="center">
+      <asp:ImageButton ID="SubmitButton" runat="server" ImageUrl="~/Content/arrow.png" Height="50px" Width="50px" OnClick="Button1_Click" AlternateText="Submit Review" />
+        <br/>
+        
+    </div>
 </asp:Content>
