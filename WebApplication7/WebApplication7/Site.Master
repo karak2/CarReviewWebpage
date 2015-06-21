@@ -58,7 +58,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>(Cars) &copy; <%: DateTime.Now.Year %> - Rate your car!</p>
+                <p>Cars &copy; <%: DateTime.Now.Year %> - Rate your car!</p>
             </footer>
         </div>
     </form>

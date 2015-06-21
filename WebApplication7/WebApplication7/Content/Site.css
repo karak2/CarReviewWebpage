@@ -2,7 +2,26 @@
 body {
     padding-top: 150px;
     padding-bottom: 20px;
-    background-color: darkgrey;
+    background-color: #292929;
+    color: #FF8623;
+    font-variant: small-caps;
+    font-size: 20px;
+}
+
+/*h1 {
+    color: #FF8623;
+}*/
+
+select {
+    font-variant: small-caps;
+    color: #FF8623;
+    background-color: #494949;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
 }
 
 /* Wrapping element */
@@ -12,13 +31,13 @@ body {
     padding-right: 15px;
 }
 
-table, th, td {
-   /*border: 1px solid black;*/
-}
+/*table, th, td {
+   border: 1px solid black;
+}*/
 
-tr:nth-child(even) {
+/*tr:nth-child(odd) {
     background-color: lightgray;
-}
+}*/
 
 .mymenu {
     background-image: url("header2.jpg");
