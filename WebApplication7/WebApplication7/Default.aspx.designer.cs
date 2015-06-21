@@ -22,6 +22,24 @@ namespace WebApplication7 {
         protected global::System.Web.UI.WebControls.DropDownList Brand;
         
         /// <summary>
+        /// CustomBrand control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CustomBrand;
+        
+        /// <summary>
+        /// IsCustomBrand control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox IsCustomBrand;
+        
+        /// <summary>
         /// Type control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,24 @@ namespace WebApplication7 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList Type;
+        
+        /// <summary>
+        /// CustomType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CustomType;
+        
+        /// <summary>
+        /// IsCustomType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox IsCustomType;
         
         /// <summary>
         /// Relayability control.

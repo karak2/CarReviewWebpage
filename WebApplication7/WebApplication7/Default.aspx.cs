@@ -105,8 +105,8 @@ namespace WebApplication7
         {
             var review = new UserReview()
             {
-                Brand = Brand.SelectedValue,
-                Type = Type.SelectedValue,
+                Brand = !IsCustomBrand.Checked ? Brand.SelectedValue : CustomBrand.Text,
+                Type = !IsCustomType.Checked ? Type.SelectedValue : CustomType.Text,
                 Comfort = Convert.ToInt32(Comfort.SelectedValue),
                 DrivenKms = ConvertKmStringToInt(DrivenKms.SelectedValue),
                 Garage = Convert.ToInt32(Garage.SelectedValue),
@@ -133,6 +133,18 @@ namespace WebApplication7
         protected void BrandChanged(object sender, EventArgs e)
         {
             UpdateTypeValues(Brand.SelectedValue);
+        }
+
+        protected void IsCustomBrand_OnCheckedChanged(object sender, EventArgs e)
+        {
+            Brand.Visible = !IsCustomBrand.Checked;
+            CustomBrand.Visible = IsCustomBrand.Checked;
+        }
+
+        protected void IsCustomType_OnCheckedChanged(object sender, EventArgs e)
+        {
+            Type.Visible = !IsCustomType.Checked;
+            CustomType.Visible = IsCustomType.Checked;
         }
     }
 }

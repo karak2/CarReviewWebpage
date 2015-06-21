@@ -9,12 +9,16 @@
         </tr>
         <tr>
             <td>
-                <asp:DropDownList ID="Brand" runat="server" AutoPostBack="True" OnSelectedIndexChanged="BrandChanged">
-                </asp:DropDownList>
+                <asp:DropDownList ID="Brand" runat="server" AutoPostBack="True" OnSelectedIndexChanged="BrandChanged"/>
+                <asp:TextBox ID="CustomBrand" runat="server" Visible="False"></asp:TextBox>
+                <br/>
+                <asp:CheckBox ID="IsCustomBrand" runat="server" OnCheckedChanged="IsCustomBrand_OnCheckedChanged" AutoPostBack="True" /> other
             </td>
               <td>
-                <asp:DropDownList ID="Type" runat="server">
-                </asp:DropDownList>
+                  <asp:DropDownList ID="Type" runat="server"/>
+                 <asp:TextBox ID="CustomType" runat="server" Visible="False"></asp:TextBox>
+                 <br/>
+                 <asp:CheckBox ID="IsCustomType" runat="server" OnCheckedChanged="IsCustomType_OnCheckedChanged" AutoPostBack="True" /> other
             </td>
         </tr>
         <tr>
