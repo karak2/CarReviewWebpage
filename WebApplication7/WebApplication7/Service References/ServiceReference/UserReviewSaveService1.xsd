@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CarsBigDataService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CarsBigDataService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="UserReview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AverageConsumption" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comfort" type="xs:int" />
+      <xs:element minOccurs="0" name="DrivenKms" type="xs:int" />
+      <xs:element minOccurs="0" name="Garage" type="xs:int" />
+      <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KmsWhenBought" type="xs:int" />
+      <xs:element minOccurs="0" name="Performance" type="xs:int" />
+      <xs:element minOccurs="0" name="Relyability" type="xs:int" />
+      <xs:element minOccurs="0" name="RunningCost" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalImpression" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Verdict" type="xs:double" />
+      <xs:element minOccurs="0" name="YearOfManufacturing" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YearOfPurchase" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserReview" nillable="true" type="tns:UserReview" />
+  <xs:complexType name="UserReviewSaveResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserReviewSaveResult" nillable="true" type="tns:UserReviewSaveResult" />
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cfa04d80-e3c6-4ac0-8325-072cf0c6f84b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://appharustestapp1.apphb.com/UserReviewSaveService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserReviewSaveService.xsd" MetadataType="Schema" ID="88e19d78-955c-467d-8ef9-a386eaacda14" SourceId="1" SourceUrl="http://appharustestapp1.apphb.com/UserReviewSaveService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserReviewSaveService.disco" MetadataType="Disco" ID="6ead46a6-b6b4-42ff-abfd-537e3bc3b68f" SourceId="1" SourceUrl="http://appharustestapp1.apphb.com/UserReviewSaveService.svc?disco" />
+    <MetadataFile FileName="UserReviewSaveService1.xsd" MetadataType="Schema" ID="0b6746a6-bf36-46b7-a7ae-8073d3d1f3e6" SourceId="1" SourceUrl="http://appharustestapp1.apphb.com/UserReviewSaveService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserReviewSaveService2.xsd" MetadataType="Schema" ID="a71d1384-872b-4c63-b488-4487057fea4f" SourceId="1" SourceUrl="http://appharustestapp1.apphb.com/UserReviewSaveService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserReviewSaveService.wsdl" MetadataType="Wsdl" ID="28876da3-b638-4eac-9937-a101fed01d55" SourceId="1" SourceUrl="http://appharustestapp1.apphb.com/UserReviewSaveService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
