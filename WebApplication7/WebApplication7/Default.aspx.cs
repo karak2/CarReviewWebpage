@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Description;
@@ -12,34 +13,37 @@ using WebApplication7.ServiceReference;
 namespace WebApplication7
 {
 
-
-
-
-    internal class Brand
+    class BrandsAndTypes : Dictionary<string, List<string>>
     {
-        public string Name { get; set; }
-        public List<string> Types { get; set; }
-
+        public void AddBrandAndType(string brand, string type)
+        {
+            if (!this.ContainsKey(brand))
+            {
+                this.Add(brand, new List<string>());
+            }
+            var typeList = this[brand];
+            if (!typeList.Contains(type))
+            {
+                typeList.Add(type);
+            }
+        }
     }
 
+    
     public partial class Default : System.Web.UI.Page
     {
 
-        Dictionary<string, Brand> brands = new Dictionary<string, Brand>();
+        BrandsAndTypes brandsAndTypesDictionary = GetBrandsAndTpyes();
+
+        private static BrandsAndTypes GetBrandsAndTpyes()
+        {
+            var json = File.ReadAllText(Path.Combine(HttpContext.Current.Request.PhysicalApplicationPath, "Content", "BrandAndTypeDicitonary.json"));
+            var result = JsonHelper.FromJsonString<BrandsAndTypes>(json);
+            return result;
+        }
 
         public Default()
         {
-            brands = new Dictionary<string, Brand>();
-            brands.Add("BMW", new Brand()
-            {
-                Name = "BMW",
-                Types = new List<string>() { "X1", "X2" }
-            });
-            brands.Add("Ford", new Brand()
-            {
-                Name = "Ford",
-                Types = new List<string>() { "Focus", "S-MAX" }
-            });
         }
 
 
@@ -53,7 +57,7 @@ namespace WebApplication7
 
         private void InitializeFormFirstTime()
         {
-            FillDropdownListWithValues(Brand, brands.Keys.ToArray());
+            FillDropdownListWithValues(Brand, brandsAndTypesDictionary.Keys.ToArray());
             FillDropdownListWithValues(Relayability, 1, 10);
             FillDropdownListWithValues(RunningCosts, 1, 10);
             FillDropdownListWithValues(Performance, 1, 10);
@@ -69,7 +73,7 @@ namespace WebApplication7
         private void UpdateTypeValues(string selectedBrand)
         {
             Type.Items.Clear();
-            FillDropdownListWithValues(Type, brands[selectedBrand].Types.ToArray());
+            FillDropdownListWithValues(Type, brandsAndTypesDictionary[selectedBrand].ToArray());
         }
 
         private void AddSelectableKms(DropDownList kmList)

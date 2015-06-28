@@ -151,6 +151,7 @@
     <Content Include="Content\arrow.png" />
     <Content Include="Content\header.jpg" />
     <Content Include="Content\header2.jpg" />
+    <Content Include="Content\BrandAndTypeDicitonary.json" />
     <None Include="Service References\ServiceReference\UserReviewSaveService.disco" />
     <None Include="Service References\ServiceReference\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference\configuration.svcinfo" />
@@ -229,6 +230,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="JsonHelper.cs" />
     <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
