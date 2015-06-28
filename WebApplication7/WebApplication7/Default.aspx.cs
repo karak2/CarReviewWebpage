@@ -58,11 +58,11 @@ namespace WebApplication7
         private void InitializeFormFirstTime()
         {
             FillDropdownListWithValues(Brand, brandsAndTypesDictionary.Keys.ToArray());
-            FillDropdownListWithValues(Relayability, 1, 10);
-            FillDropdownListWithValues(RunningCosts, 1, 10);
-            FillDropdownListWithValues(Performance, 1, 10);
-            FillDropdownListWithValues(Comfort, 1, 10);
-            FillDropdownListWithValues(Garage, 1, 10);
+            FillDropdownListWithValuesInReverseOrder(Relayability, 1, 10);
+            FillDropdownListWithValuesInReverseOrder(RunningCosts, 1, 10);
+            FillDropdownListWithValuesInReverseOrder(Performance, 1, 10);
+            FillDropdownListWithValuesInReverseOrder(Comfort, 1, 10);
+            FillDropdownListWithValuesInReverseOrder(Garage, 1, 10);
             AddSelectableYearsToDropdownListValues(ManufactureYear);
             AddSelectableYearsToDropdownListValues(BoughtYear);
             AddSelectableKms(DrivenKms);
@@ -82,9 +82,9 @@ namespace WebApplication7
             FillDropdownListWithValues(kmList, kms.ToArray());
         }
 
-        private void AddSelectableYearsToDropdownListValues(DropDownList ManufactureYear)
+        private void AddSelectableYearsToDropdownListValues(DropDownList list)
         {
-            FillDropdownListWithValues(ManufactureYear, 1950 ,  2015);
+            FillDropdownListWithValuesInReverseOrder(list, 1950, 2015);
         }
 
 
@@ -99,7 +99,15 @@ namespace WebApplication7
 
         private static void FillDropdownListWithValues(DropDownList list, int begin, int end)
         {
-            for (int i = begin; i < end + 1 ; i++)
+            for (int i = begin; i <= end ; i++)
+            {
+                list.Items.Add(i.ToString());
+            }
+        }
+
+        private static void FillDropdownListWithValuesInReverseOrder(DropDownList list, int begin, int end)
+        {
+            for (int i = end; i >= begin ; i--)
             {
                 list.Items.Add(i.ToString());
             }

@@ -2,6 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Rate your car, current or former...</h1>
+    Select numbers between 1-10. The higher the better.
     <table style="width: 100%">
         <tr>
             <td>Brand</td>
@@ -19,6 +20,37 @@
                  <asp:TextBox ID="CustomType" runat="server" Visible="False"></asp:TextBox>
                  <br/>
                  <asp:CheckBox ID="IsCustomType" runat="server" OnCheckedChanged="IsCustomType_OnCheckedChanged" AutoPostBack="True" /> other
+            </td>
+        </tr>
+        <tr>
+            <td>Year of manufacture</td>
+            <td>Year of purcase</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:DropDownList ID="ManufactureYear" runat="server">
+                </asp:DropDownList>
+            </td>
+            <td>
+                <asp:DropDownList ID="BoughtYear" runat="server">
+                </asp:DropDownList>
+            </td>
+        </tr>
+         <tr>
+            <td>Distance when bought</td>
+            <td>Driven distance</td>
+        </tr>
+        <tr>
+            <td>
+
+                <asp:DropDownList ID="KmsWhenBought" runat="server">
+                </asp:DropDownList>
+
+            </td>
+            <td>
+
+                <asp:DropDownList ID="DrivenKms" runat="server">
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>
@@ -54,7 +86,7 @@
         </tr>
         <tr>
             <td>Garage</td>
-            <td>Year of manufacture</td>
+            <td>Submit rating</td>
         </tr>
         <tr>
             <td>
@@ -62,41 +94,6 @@
                 <asp:DropDownList ID="Garage" runat="server">
                 </asp:DropDownList>
 
-            </td>
-            <td>
-
-                <asp:DropDownList ID="ManufactureYear" runat="server">
-                </asp:DropDownList>
-
-            </td>
-        </tr>
-        <tr>
-            <td>Year of purcase</td>
-            <td>Distance when bought</td>
-        </tr>
-        <tr>
-            <td>
-
-                <asp:DropDownList ID="BoughtYear" runat="server">
-                </asp:DropDownList>
-
-            </td>
-            <td>
-
-                <asp:DropDownList ID="KmsWhenBought" runat="server">
-                </asp:DropDownList>
-
-            </td>
-        </tr>
-        <tr>
-            <td>Driven distance</td>
-            <td>Submit review</td>
-        </tr>
-        <tr>
-            <td>
-
-                <asp:DropDownList ID="DrivenKms" runat="server">
-                </asp:DropDownList>
             </td>
             <td>
                 <asp:ImageButton ID="SubmitButton" runat="server" ImageUrl="~/Content/arrow.png" Height="50px" Width="50px" OnClick="Button1_Click" AlternateText="Submit Review" />        
