@@ -40,12 +40,12 @@ select {
 }*/
 
 .mymenu {
-    background-image: url("header2.jpg");
+    background-image: url("header_v2_0.jpg");
     background-position: center 75%;
 }
 
 .mymenu2 {
-    background-image: url("header.jpg");
+    background-image: url("header_v2_0.jpg");
     background-repeat: no-repeat;
     height: 150px;
     background-position: center 75%;
