@@ -67,6 +67,15 @@ namespace WebApplication7 {
         protected global::System.Web.UI.WebControls.CheckBox IsCustomType;
         
         /// <summary>
+        /// ManufactureYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ManufactureYear;
+        
+        /// <summary>
         /// BoughtYear control.
         /// </summary>
         /// <remarks>
@@ -76,13 +85,22 @@ namespace WebApplication7 {
         protected global::System.Web.UI.WebControls.DropDownList BoughtYear;
         
         /// <summary>
-        /// ManufactureYear control.
+        /// KmsWhenBought control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ManufactureYear;
+        protected global::System.Web.UI.WebControls.DropDownList KmsWhenBought;
+        
+        /// <summary>
+        /// DrivenKms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DrivenKms;
         
         /// <summary>
         /// Relayability control.
@@ -128,24 +146,6 @@ namespace WebApplication7 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList Garage;
-        
-        /// <summary>
-        /// KmsWhenBought control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KmsWhenBought;
-        
-        /// <summary>
-        /// DrivenKms control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DrivenKms;
         
         /// <summary>
         /// SubmitButton control.
