@@ -1,6 +1,6 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 20px;
     background-color: #292929;
     color: #FF8623;
@@ -40,15 +40,15 @@ select {
 }*/
 
 .mymenu {
-    background-image: url("header_v2_0.jpg");
-    background-position: center 75%;
+    background-image: url("header_v2_1.jpg");
+    background-position: center;
 }
 
 .mymenu2 {
-    background-image: url("header_v2_0.jpg");
+    background-image: url("header_v2_1.jpg");
     background-repeat: no-repeat;
-    height: 150px;
-    background-position: center 75%;
+    height: 100px;
+    background-position: center;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

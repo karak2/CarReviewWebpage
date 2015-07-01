@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Security.Claims;
 using System.Security.Principal;
+using System.Threading;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -14,7 +16,7 @@ namespace WebApplication7
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
-
+        
         protected void Page_Init(object sender, EventArgs e)
         {
             // The code below helps to protect against XSRF attacks
@@ -68,12 +70,31 @@ namespace WebApplication7
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ddlLanguage.SelectedValue = Thread.CurrentThread.CurrentCulture.Name;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut();
+        }
+
+        protected void ddlLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Sets the cookie that is to be used by Global.asax
+            HttpCookie cookie = new HttpCookie("CultureInfo");
+            cookie.Value = ddlLanguage.SelectedValue;
+            Response.Cookies.Add(cookie);
+
+            //Set the culture and reload the page for immediate effect. 
+            //Future effects are handled by Global.asax
+            Thread.CurrentThread.CurrentCulture =
+                          new CultureInfo(ddlLanguage.SelectedValue);
+            Thread.CurrentThread.CurrentUICulture =
+                          new CultureInfo(ddlLanguage.SelectedValue);
+            Response.Redirect(Request.Path);
         }
     }
 

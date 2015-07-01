@@ -1,12 +1,18 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication7.Default" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication7.Default" uiculture="auto" %>
+
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>Rate your car, current or former...</h1>
-    Selectable numbers between 1-10: The higher the better.
+   
+    <h1><% Response.Write(I18N_ReviewForm_Welcome); %></h1>
+    <% Response.Write(I18N_DescriptionOfTheDecimalRatingValues); %>
     <table style="width: 100%">
         <tr>
-            <td>Brand</td>
-            <td>Type</td>
+            <td>
+                <% Response.Write(I18N_BrandLabel); %>
+            </td>
+            <td>
+                <% Response.Write(I18N_TypeLabel); %>
+            </td>
         </tr>
         <tr>
             <td>
@@ -14,19 +20,23 @@
                 <asp:TextBox ID="CustomBrand" runat="server" Visible="False"></asp:TextBox>
                 <br />
                 <asp:CheckBox ID="IsCustomBrand" runat="server" OnCheckedChanged="IsCustomBrand_OnCheckedChanged" AutoPostBack="True" />
-                other
+                <% Response.Write(I18N_OtherLabel); %>
             </td>
             <td>
                 <asp:DropDownList ID="Type" runat="server" />
                 <asp:TextBox ID="CustomType" runat="server" Visible="False"></asp:TextBox>
                 <br />
                 <asp:CheckBox ID="IsCustomType" runat="server" OnCheckedChanged="IsCustomType_OnCheckedChanged" AutoPostBack="True" />
-                other
+                <% Response.Write(I18N_OtherLabel); %>
             </td>
         </tr>
         <tr>
-            <td>Year of manufacture</td>
-            <td>Year of purcase</td>
+            <td>
+                <% Response.Write(I18N_YearOfManufacture); %>
+            </td>
+            <td>
+                <% Response.Write(I18N_YearOfPurchase); %>
+            </td>
         </tr>
         <tr>
             <td>
@@ -39,15 +49,19 @@
             </td>
         </tr>
         <tr>
-            <td>Distance when bought</td>
-            <td>Driven distance</td>
+            <td>
+                <% Response.Write(I18N_DistanceWhenBought); %>
+            </td>
+            <td>
+                <% Response.Write(I18N_DrivenDistance); %>
+            </td>
+            
         </tr>
         <tr>
             <td>
 
                 <asp:DropDownList ID="KmsWhenBought" runat="server">
                 </asp:DropDownList>
-
             </td>
             <td>
 
@@ -56,8 +70,14 @@
             </td>
         </tr>
         <tr>
-            <td>Relyability (<a href="#" data-toggle="tooltip" title="Represent the ability of the wheicle to function under regular conditions">?</a>)</td>
-            <td>Costs (<a href="#" data-toggle="tooltip" title="Operating costs are the expenses which are related to the operation of the vehicle. It is the regular, usual and customary recurring costs. This does not include the capital cost of constructing or purchasing the vehicle.">?</a>)</td>
+            <td>
+                <% Response.Write(I18N_Reliability); %>
+                (<a href="#" data-toggle="tooltip" title="<% Response.Write(I18N_RelyabilityDefinition); %>">?</a>)
+            </td>
+            <td>
+                <% Response.Write(I18N_Costs); %>
+                (<a href="#" data-toggle="tooltip" title="<% Response.Write(I18N_CostsDefinition); %>">?</a>)
+            </td>
         </tr>
         <tr>
             <td>
@@ -71,8 +91,14 @@
             </td>
         </tr>
         <tr>
-            <td>Performance (<a href="#" data-toggle="tooltip" title="Speed, acceleration, breaks, ...">?</a>)</td>
-            <td>Comfort (<a href="#" data-toggle="tooltip" title="Seats, extras, ...">?</a>)</td>
+            <td>
+                <% Response.Write(I18N_Performance); %>
+                (<a href="#" data-toggle="tooltip" title="<% Response.Write(I18N_PerformanceDefinition); %>">?</a>)
+            </td>
+            <td>
+                <% Response.Write(I18N_Comfort); %>
+                (<a href="#" data-toggle="tooltip" title="<% Response.Write(I18N_ComfortDefinition); %>">?</a>)
+            </td>
         </tr>
         <tr>
             <td>
@@ -87,8 +113,14 @@
             </td>
         </tr>
         <tr>
-            <td>Garage (<a href="#" data-toggle="tooltip" title="Quality, speed, relyability of the garage's service">?</a>)</td>
-            <td>Submit rating</td>
+            <td>
+                
+                <% Response.Write(I18N_Garage); %>
+                (<a href="#" data-toggle="tooltip" title="<% Response.Write(I18N_GarageDefinition); %>">?</a>)
+            </td>
+            <td>
+                <% Response.Write(I18N_SubmitRating); %>
+            </td>
         </tr>
         <tr>
             <td>

@@ -11,7 +11,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -39,7 +39,7 @@
         </asp:ScriptManager>
 
         <div class="navbar navbar-inverse navbar-fixed-top mymenu">
-            
+
             <div class="container mymenu2">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -53,7 +53,13 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content">
+        <div class="container body-content" runat="server">
+            <asp:DropDownList ID="ddlLanguage" runat="server"
+                OnSelectedIndexChanged="ddlLanguage_SelectedIndexChanged"
+                AutoPostBack="true">
+                <asp:ListItem Text="English" Value="en-US" />
+                <asp:ListItem Text="Deutch" Value="de-DE"  />
+            </asp:DropDownList>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

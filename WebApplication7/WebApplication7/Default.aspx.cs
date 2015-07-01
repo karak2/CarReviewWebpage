@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Description;
+using System.Threading;
 using System.Web;
 using System.Web.Services;
 using System.Web.UI;
@@ -35,6 +37,105 @@ namespace WebApplication7
 
         BrandsAndTypes brandsAndTypesDictionary = GetBrandsAndTpyes();
 
+        public string I18N_BrandLabel {
+            get { return Resource.ResourceManager.GetString("Brand", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_TypeLabel
+        {
+            get { return Resource.ResourceManager.GetString("Type", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_OtherLabel
+        {
+            get { return Resource.ResourceManager.GetString("Other", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_YearOfManufacture
+        {
+            get { return Resource.ResourceManager.GetString("YearOfManufacture", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_YearOfPurchase
+        {
+            get { return Resource.ResourceManager.GetString("YearOfPurchase", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_DrivenDistance
+        {
+            get { return Resource.ResourceManager.GetString("DrivenDistance", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_DistanceWhenBought
+        {
+            get { return Resource.ResourceManager.GetString("DistanceWhenBought", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_RelyabilityDefinition
+        {
+            get { return Resource.ResourceManager.GetString("RelyabilityDefinition", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_Reliability
+        {
+            get { return Resource.ResourceManager.GetString("Reliability", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_PerformanceDefinition
+        {
+            get { return Resource.ResourceManager.GetString("PerformanceDefinition", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_Performance
+        {
+            get { return Resource.ResourceManager.GetString("Performance", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_ComfortDefinition
+        {
+            get { return Resource.ResourceManager.GetString("ComfortDefinition", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_Comfort
+        {
+            get { return Resource.ResourceManager.GetString("Comfort", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_GarageDefinition
+        {
+            get { return Resource.ResourceManager.GetString("GarageDefinition", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_Garage
+        {
+            get { return Resource.ResourceManager.GetString("Garage", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_SubmitRating
+        {
+            get { return Resource.ResourceManager.GetString("SubmitRating", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_ReviewForm_Welcome
+        {
+            get { return Resource.ResourceManager.GetString("ReviewForm_Welcome", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_DescriptionOfTheDecimalRatingValues
+        {
+            get { return Resource.ResourceManager.GetString("DescriptionOfTheDecimalRatingValues", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_CostsDefinition
+        {
+            get { return Resource.ResourceManager.GetString("CostsDefinition", CultureInfo.CurrentCulture); }
+        }
+
+        public string I18N_Costs
+        {
+            get { return Resource.ResourceManager.GetString("Costs", CultureInfo.CurrentCulture); }
+        }
+
         private static BrandsAndTypes GetBrandsAndTpyes()
         {
             var json = File.ReadAllText(Path.Combine(HttpContext.Current.Request.PhysicalApplicationPath, "Content", "BrandAndTypeDicitonary.json"));
@@ -53,6 +154,7 @@ namespace WebApplication7
             {
                 InitializeFormFirstTime();
             }
+            
         }
 
         private void InitializeFormFirstTime()

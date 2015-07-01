@@ -149,9 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\arrow.png" />
-    <Content Include="Content\header.jpg" />
     <Content Include="Content\header2.jpg" />
     <Content Include="Content\BrandAndTypeDicitonary.json" />
+    <Content Include="Content\header_v2_1.pdn" />
     <None Include="Service References\ServiceReference\UserReviewSaveService.disco" />
     <None Include="Service References\ServiceReference\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference\configuration.svcinfo" />
@@ -160,7 +160,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Content\header3.jpg" />
-    <Content Include="Content\header_v2_0.jpg" />
+    <Content Include="Content\header_v2_1.jpg" />
     <Content Include="Thanks.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -233,6 +233,16 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="JsonHelper.cs" />
+    <Compile Include="Resource.de-DE.Designer.cs">
+      <DependentUpon>Resource.de-DE.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,6 +299,17 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.de-DE.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.de-DE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
